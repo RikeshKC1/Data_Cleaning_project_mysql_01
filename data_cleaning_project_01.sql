@@ -43,6 +43,7 @@ CREATE TABLE `layoff_staging2` (
   `company` text,
   `location` text,
   `industry` text,
+  
   `total_laid_off` int DEFAULT NULL,
   `percentage_laid_off` text,
   `date` text,
