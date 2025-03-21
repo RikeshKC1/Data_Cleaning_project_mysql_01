@@ -39,7 +39,19 @@ delete from layoff_duplicate1 where row_num >1 ;
 
 select * from layoff_duplicate1 where row_num >1;
 
+-- standarization
+
+select * from layoff_duplicate1 ;
+
+select company, trim(company) from layoff_duplicate1 ;
 
 
+SET SQL_SAFE_UPDATES = 0;
+update layoff_duplicate1
+set company = trim(company);
+
+select * from layoff_duplicate1;
+
+select industry from layoff
 
 

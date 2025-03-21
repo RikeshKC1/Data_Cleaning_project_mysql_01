@@ -86,11 +86,16 @@ update layoff_staging2
 set company = trim(company);
 
 select * from layoff_staging2;
+-- looking for industry
+select distinct industry from layoff_staging2 order by 1;
 
+select * from layoff_staging2 where industry like 'Crypto%';
 
+update layoff_staging2
+set industry = 'Crypto'
+where industry like 'Crypto%';
 
-
-
+select distinct industry from layoff_staging2;
 
 
 
