@@ -76,6 +76,16 @@ Row_num >1;
 select * from layoff_staging2;
 
 
+-- standarizing
+select * from layoff_staging2;
+
+select company,  trim(company) from layoff_staging2;
+
+SET SQL_SAFE_UPDATES = 0;
+update layoff_staging2
+set company = trim(company);
+
+select * from layoff_staging2;
 
 
 

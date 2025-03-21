@@ -51,5 +51,13 @@ select * from rikesh2;
 delete
 from rikesh2 where row_num >1;
 
+-- standarizaing
 
- 
+
+select company, trim(company) from rikesh2;
+
+
+update rikesh2
+set company = trim(company);
+
+ select * from rikesh2 ;
